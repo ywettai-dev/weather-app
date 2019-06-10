@@ -33,7 +33,7 @@ app.post('/', (req, res) => {
                 error: `Error, please try again`
             });
         } else {
-            let weather = JSON.parse(body);
+            const weather = JSON.parse(body);
             if (weather.main == undefined) {
                 res.render('index', {
                     weather: null,
