@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="images/burger-favicon.ico">
+        <title>wezmo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <%# Main CSS %>
+        <link href="css/styles.css" rel="stylesheet">
+        <%# Bootstrap %>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> %>
+        <%# Google Fonts %>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+            <a class="navbar-brand" href="/">{wezmo} Your trustworthy buddy</a>
+            <%# <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMemoz"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> %>
+            <%# <div class="collapse navbar-collapse" id="navbarMemoz">
+                <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/about">ABOUT US</a>
+                <a class="nav-item nav-link" href="/contact">CONTACT US</a>
+                </div>
+            </div> %>
+            </div>
+        </nav>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 offset-sm-3 text-center">
+                    <form action="/" method="post" class="ctm-form">
+                        <input type="text" name="city" class="ctm-input" placeholder="Enter a City" required>
+                        <input type="submit" class="ctm-button" value="Get Weather Info">
+                    </form>
+
+                    <% if(locals.weather !== null){ %>
+                        <p><%= locals.weather %></p>
+                    <% } %>
+
+                    <% if(locals.error !== null){ %>
+                        <p><%= locals.error %></p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</html>
