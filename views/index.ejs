@@ -34,16 +34,16 @@
             <div class="row">
                 <div class="col-sm-6 offset-sm-3 text-center">
                     <form action="/" method="post" class="ctm-form">
-                        <input type="text" name="city" class="ctm-input" placeholder="Enter a City" required>
+                        <input type="text" name="city" class="ctm-input" placeholder="Enter a City" required autofocus>
                         <input type="submit" class="ctm-button" value="Get Weather Info">
                     </form>
 
-                    <% if(weather !== null){ %>
-                        <p><%= weather %></p>
+                    <% if(locals.weather !== null){ %>
+                        <p><%= locals.weather %></p>
                     <% } %>
 
-                    <% if(error !== null){ %>
-                        <p><%= error %></p>
+                    <% if(locals.error !== null){ %>
+                        <p><%= locals.error %></p>
                     <% } %>
                 </div>
             </div>

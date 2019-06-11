@@ -9,6 +9,7 @@ body {
 }
 
 .navbar-brand {
+    text-decoration: none;
     font-weight: 600;
     color: #1abc9c !important;
 }
